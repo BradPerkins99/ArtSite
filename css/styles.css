@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css?family=Sigmar+One&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light|Source+Sans+Pro:400,700");
+@import url('https://fonts.googleapis.com/css?family=Chelsea+Market|Sigmar+One&display=swap');
+
+body{
+  margin: 0%;
+  background-color: black;
+}
+
+h2{
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
+  font-size: 32px;
+  padding-bottom: 12px;
+}
+
+/* -----GRID ITEMS----------------- */
+.container{
+  /* position: relative; */
+  /* min-height: 100vh; */
+  height: 100vmax;
+  display: grid;
+  padding: 0;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: 60px 180px 60px auto 120px;
+  grid-template-areas: 
+        "m m m m m m m m m m m m"
+        "h h h h h h h h h h h h"
+        "c c c c c c c c c c c c"
+        "g g g g g g g g g g g g"
+        "f f f f f f f f f f f f";
+}
+
+.container{
+  padding: 0;
+}
+
+
+
+.header{
+  background: url(../images/banner2.jpg);
+  grid-area: h;
+  
+}
+
+.menu{
+  background: #55d6aa;
+  grid-area: m;
+}  
+
+.menu .no-pad{
+  padding: 0;
+}
+
+.content{
+  grid-area: c;
+}
+
+.footer{
+  background: #55d6aa;
+  grid-area: f;
+}
+
+.main-gallery{
+  margin-top: 24px;
+  grid-area: g;
+ 
+}
+
+
+/* -----TOP-BAR----------------- */
+
+.top-nav {
+  padding: 0;
+  overflow: auto;
+  text-align:center;
+}
+
+.top-nav ul{
+  margin: 0 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.top-nav li{
+  display: inline-block;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 25px;
+  position: relative;
+}
+
+.top-nav a{
+  color: #fff;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+} 
+
+.top-nav a:hover {
+  color: white;
+}
+
+.top-nav .home a:hover{
+  color: plum;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.top-nav .about a:hover{
+  color: plum;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.top-nav .art a:hover{
+  color: plum;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.top-nav .contact a:hover{
+  color: plum;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.top-nav a::before{
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: plum;
+  position: absolute;
+  top: 0;
+  width: 0%;
+  transition: all ease-in-out 250ms;
+}
+
+.top-nav a:hover::before{
+  width: 100%;
+}
+
+
+
+/* -----MAIN HEADER------------ */
+.main-header h1{
+  font-family: 'Chelsea Market', cursive;
+  color: #55d6aa;
+  font-size: 56px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 0%;
+  
+}
+
+.main-header h1 span{  
+  background-color: #ffffffd0;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+
+}
+
+
+/* -----SOCIAL ICONS------------ */
+.social-icon{
+  margin: -50px;
+  text-align:center;
+}
+
+.social-icon ul{
+  margin: 0 0 0 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+
+.social-icon li{
+  display: inline-block;
+  text-align: center;
+  /* margin-left: 10px; */
+  margin-right: 30px;
+  position: relative;
+}
+.social-icon{
+  margin: -10px;
+  text-align:center;
+  
+}
+
+.social-icon li a {
+  color: #fff;
+  font-size: 30px;
+  background: #55d6aa;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  display: block;
+  border-radius: 25%;
+  border-color: white;
+  border-width: 10px;
+  margin: -180px 6px 12px 6px;
+  transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+}
+
+.social-icon li a:hover {
+  color: plum;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+
+}
+
+.social-icon li .twitter:hover {
+  background: #fff;
+}
+
+.social-icon li .instagram:hover {
+  background: #fff;
+}
+
+.social-icon li .tumblr:hover {
+  background: #fff;
+}
+
+
+
+/* -----IMAGE GALLERY----------------- */
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns 
+  that sits next to each other */
+.column {
+  -ms-flex: 25%; 
+  flex: 25%;
+  max-width: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout 
+  instead of four columns */
+@media screen and (max-width: 760px) {
+  .column {
+    align-items: center;
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Responsive layout - makes a two column-layout 
+  instead of four columns */
+
+   @media screen and (max-width: 680px) {
+    .column {
+      align-items: center;
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+  
+@media screen and (max-width: 600px) {
+  .column {
+    align-items: center;
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+/* -----FOOTER---------------- */
+.footer-det{
+  font-size: 16px;
+  font-family: "Source Sans Pro", sans-serif;  
+  color: rgb(82, 9, 9);
+  text-align: center;
+}
+
+
+
+
+
+
+.social-icon-footer{
+  margin: -50px;
+  text-align:center;
+}
+
+.social-icon-footer ul{
+  margin: 0 0 0 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+
+.social-icon-footer li{
+  display: inline-block;
+  text-align: center;
+  /* margin-left: 10px; */
+  margin-right: 30px;
+  position: relative;
+}
+.social-icon-footer{
+  margin: -10px;
+  text-align:center;
+  
+}
+
+.social-icon-footer li a {
+  color: #fff;
+  font-size: 30px;
+  background: #55d6aa;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  display: block;
+  border-radius: 25%;
+  border-color: white;
+  border-width: 10px;
+  margin: 18px 6px 0px 6px;
+  transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+}
+
+.social-icon-footer li a:hover {
+  color: plum;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+}
+
+.social-icon-footer li .twitter:hover {
+  background: #fff;
+}
+
+.social-icon-footer li .instagram:hover {
+  background: #fff;
+}
+
+.social-icon-footer li .tumblr:hover {
+  background: #fff;
+}
